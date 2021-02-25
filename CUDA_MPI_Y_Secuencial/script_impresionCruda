@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Este script tiene como objetivo medir todos los valores posibles de numero de threads
+# desde nuestro mínimo pragmático 100, hasta llegar a 1024, el análogo máximo para mi equipo
+# Los resultados se guardan en 'data/ejecucion/numThread'
+
+#COMPILACION
+nvcc src/sobel_impresionCruda.cu `pkg-config --libs opencv` -lstdc++ -Iinclude -I/usr/include/opencv/ \
+-I/usr/include/opencv2/ -o bin/sobel_impresionCruda -Xcompiler -fopenmp -w -O2
+
+#BORRAR RESULTADOS ANTERIORES
+rm -rf data/ejecucion/numThreads
+
+#EJECUCION
+echo -e "Ejecutando Codigo GPU..."
+for i in {10..32}
+do
+	echo "$i" >> data/ejecucion/numThread
+	./bin/sobel_impresionCruda data/imagenes/i/real_spidy.jpg 0 $i >> data/ejecucion/numThread
+	printf '.'
+done
+echo -e "\nFin ejecucion Codigo GPU\n"

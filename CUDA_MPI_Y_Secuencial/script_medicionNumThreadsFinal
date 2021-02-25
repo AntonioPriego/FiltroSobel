@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Este script tiene como objetivo medir los valores que he elegido como numero de threads
+# 32x32 - 24x24 - 10x10
+# Los resultados se guardane en 'data/ejecucion/medicionFinal'
+
+#COMPILACION
+nvcc src/sobel.cu `pkg-config --libs opencv` -lstdc++ -Iinclude -I/usr/include/opencv/ \
+-I/usr/include/opencv2/ -o bin/sobel -Xcompiler -fopenmp -w -O2
+
+#BORRAR RESULTADOS ANTERIORES
+rm -rf data/ejecucion/medicionFinal
+
+#EJECUCION
+echo -e "Ejecutando Codigo GPU..."
+for i in {10,24,32}
+do
+	echo -e "\t>Ejecutando bin/sobel [Resolucion Baja] con numero de threadXbloque($i x $i)"
+   echo -e "[Baja Resolucion] $i" >> data/ejecucion/medicionFinal
+   for j in {0..2}
+   do
+      ./bin/sobel_impresionCruda data/imagenes/i/bacterias.jpg 0 $i >> data/ejecucion/medicionFinal
+   done
+   echo -e "\t>Ejecutando bin/sobel [Resolucion 4k  ] con numero de threadXbloque($i x $i)"
+   echo -e "\n[Resolucion 4k] $i" >> data/ejecucion/medicionFinal
+   for j in {0..2}
+   do
+      ./bin/sobel_impresionCruda data/imagenes/i/planetas.jpg 0 $i >> data/ejecucion/medicionFinal
+   done
+   echo -e "\t>Ejecutando bin/sobel [Resolucion 8k  ] con numero de threadXbloque($i x $i)"
+   echo -e "\n[Resolucion 8k] $i" >> data/ejecucion/medicionFinal
+   for j in {0..2}
+   do
+      ./bin/sobel_impresionCruda data/imagenes/i/paisaje.jpg 0 $i >> data/ejecucion/medicionFinal
+   done
+done
+echo -e "Fin ejecucion Codigo GPU\n"
