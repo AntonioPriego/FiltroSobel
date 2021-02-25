@@ -1,0 +1,10 @@
+
+./bin/cuda se ejecutara en
+  ║
+  ╚Device Number: 0
+    ╠Device name: GeForce GTX 950M
+    ╠Memory Clock Rate (KHz): 900000
+    ╠Memory Bus Width (bits): 128
+    ╠Peak Memory Bandwidth (GB/s): 28.800000
+    ╚Max threads per block: 1024
+

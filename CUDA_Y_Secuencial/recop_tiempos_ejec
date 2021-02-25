@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#COMPILACION
+gcc  -w src/secuencial.c -o bin/secuencial -lm -O2 
+nvcc -w src/cuda.cu -Iinclude -o bin/cuda -O2
+
+#BORRAR RESULTADOS ANTERIORES
+rm -rf data/ejecucion/* data/vectorC/*
+
+#EJECUCION
+echo -e "Ejecutando Codigo CPU..."
+for i in {0..9}
+do
+	for v in {0..2}
+	do
+		./bin/secuencial data/$i/input0.raw data/$i/input1.raw >> kk
+	done
+	printf '.'
+done
+echo -e "\nFin ejecucion Codigo CPU\n"
+
+echo -e "Ejecutando Codigo GPU..."
+for i in {0..9}
+do
+	for v in {0..2}
+	do
+		./bin/cuda data/$i/input0.raw data/$i/input1.raw >> kk
+	done
+	printf '.'
+done
+echo -e "\nFin ejecucion Codigo GPU\n"
+
+rm -rf kk

@@ -1,0 +1,180 @@
+
+Tamanio vector: 100
+	Tiempo ejecucion:	0.00001127
+	Tiempo R/W memoria:	0.00004345
+	Tiempo total:		0.00005472
+
+
+Tamanio vector: 100
+	Tiempo ejecucion:	0.00001262
+	Tiempo R/W memoria:	0.00004272
+	Tiempo total:		0.00005533
+
+
+Tamanio vector: 100
+	Tiempo ejecucion:	0.00001169
+	Tiempo R/W memoria:	0.00003568
+	Tiempo total:		0.00004737
+
+
+Tamanio vector: 4096
+	Tiempo ejecucion:	0.00001226
+	Tiempo R/W memoria:	0.00010030
+	Tiempo total:		0.00011255
+
+
+Tamanio vector: 4096
+	Tiempo ejecucion:	0.00001441
+	Tiempo R/W memoria:	0.00010268
+	Tiempo total:		0.00011708
+
+
+Tamanio vector: 4096
+	Tiempo ejecucion:	0.00001081
+	Tiempo R/W memoria:	0.00009188
+	Tiempo total:		0.00010269
+
+
+Tamanio vector: 32768
+	Tiempo ejecucion:	0.00001297
+	Tiempo R/W memoria:	0.00057509
+	Tiempo total:		0.00058807
+
+
+Tamanio vector: 32768
+	Tiempo ejecucion:	0.00001279
+	Tiempo R/W memoria:	0.00057330
+	Tiempo total:		0.00058609
+
+
+Tamanio vector: 32768
+	Tiempo ejecucion:	0.00001284
+	Tiempo R/W memoria:	0.00057436
+	Tiempo total:		0.00058719
+
+
+Tamanio vector: 100
+	Tiempo ejecucion:	0.00001145
+	Tiempo R/W memoria:	0.00003664
+	Tiempo total:		0.00004808
+
+
+Tamanio vector: 100
+	Tiempo ejecucion:	0.00001186
+	Tiempo R/W memoria:	0.00003532
+	Tiempo total:		0.00004718
+
+
+Tamanio vector: 100
+	Tiempo ejecucion:	0.00001153
+	Tiempo R/W memoria:	0.00005901
+	Tiempo total:		0.00007054
+
+
+Tamanio vector: 9000
+	Tiempo ejecucion:	0.00001361
+	Tiempo R/W memoria:	0.00018017
+	Tiempo total:		0.00019378
+
+
+Tamanio vector: 9000
+	Tiempo ejecucion:	0.00001764
+	Tiempo R/W memoria:	0.00020936
+	Tiempo total:		0.00022700
+
+
+Tamanio vector: 9000
+	Tiempo ejecucion:	0.00001196
+	Tiempo R/W memoria:	0.00017808
+	Tiempo total:		0.00019004
+
+
+Tamanio vector: 1025
+	Tiempo ejecucion:	0.00001115
+	Tiempo R/W memoria:	0.00008229
+	Tiempo total:		0.00009344
+
+
+Tamanio vector: 1025
+	Tiempo ejecucion:	0.00001531
+	Tiempo R/W memoria:	0.00009455
+	Tiempo total:		0.00010986
+
+
+Tamanio vector: 1025
+	Tiempo ejecucion:	0.00001149
+	Tiempo R/W memoria:	0.00007588
+	Tiempo total:		0.00008737
+
+
+Tamanio vector: 2048
+	Tiempo ejecucion:	0.00001198
+	Tiempo R/W memoria:	0.00008650
+	Tiempo total:		0.00009848
+
+
+Tamanio vector: 2048
+	Tiempo ejecucion:	0.00001167
+	Tiempo R/W memoria:	0.00008073
+	Tiempo total:		0.00009241
+
+
+Tamanio vector: 2048
+	Tiempo ejecucion:	0.00001177
+	Tiempo R/W memoria:	0.00008373
+	Tiempo total:		0.00009550
+
+
+Tamanio vector: 5000
+	Tiempo ejecucion:	0.00001212
+	Tiempo R/W memoria:	0.00011559
+	Tiempo total:		0.00012771
+
+
+Tamanio vector: 5000
+	Tiempo ejecucion:	0.00001190
+	Tiempo R/W memoria:	0.00011215
+	Tiempo total:		0.00012406
+
+
+Tamanio vector: 5000
+	Tiempo ejecucion:	0.00001178
+	Tiempo R/W memoria:	0.00009935
+	Tiempo total:		0.00011113
+
+
+Tamanio vector: 6000
+	Tiempo ejecucion:	0.00001181
+	Tiempo R/W memoria:	0.00014017
+	Tiempo total:		0.00017219
+
+
+Tamanio vector: 6000
+	Tiempo ejecucion:	0.00001206
+	Tiempo R/W memoria:	0.00013798
+	Tiempo total:		0.00015738
+
+
+Tamanio vector: 6000
+	Tiempo ejecucion:	0.00001186
+	Tiempo R/W memoria:	0.00013895
+	Tiempo total:		0.00015930
+
+
+Tamanio vector: 9000
+	Tiempo ejecucion:	0.00001189
+	Tiempo R/W memoria:	0.00018275
+	Tiempo total:		0.00019464
+
+
+Tamanio vector: 9000
+	Tiempo ejecucion:	0.00001368
+	Tiempo R/W memoria:	0.00017695
+	Tiempo total:		0.00019063
+
+
+Tamanio vector: 9000
+	Tiempo ejecucion:	0.00001184
+	Tiempo R/W memoria:	0.00018311
+	Tiempo total:		0.00019495
+
