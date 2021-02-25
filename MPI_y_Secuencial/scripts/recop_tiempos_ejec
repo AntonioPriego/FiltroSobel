@@ -1,0 +1,37 @@
+#!/bin/bash
+
+echo -e "Ejecutando Codigo secuencial..."
+for i in {0..3}
+do
+	./bin/filtro_sobel_sec >> data/TIEMPOS_sec
+
+	#filtro_sobel_paral_v1 no tiene sentido para 1 proceso
+	#mpirun -np 1 bin/filtro_sobel_paral_v1
+	mpirun -np 1 bin/filtro_sobel_paral_v2 >> data/TIEMPOS_v2
+done
+
+echo Fin np=1 >> data/TIEMPOS_v2
+echo -e "Fin ejecucion Codigo secuencial\n"
+
+
+for FILE in bin/filtro_sobel_paral*
+do
+	printf 'Ejecutando Codigo paralelo'
+	for INPUT in 2 4 8
+	do 
+		mpirun -np $INPUT ./$FILE >> data/TIEMPOS_${FILE:(-2)}
+		echo -e "\n" >> data/TIEMPOS_${FILE:(-2)}
+		printf '.'
+		mpirun -np $INPUT ./$FILE >> data/TIEMPOS_${FILE:(-2)}
+		echo -e "\n" >> data/TIEMPOS_${FILE:(-2)}
+		printf '.'
+		mpirun -np $INPUT ./$FILE >> data/TIEMPOS_${FILE:(-2)}
+		echo -e "\n" >> data/TIEMPOS_${FILE:(-2)}
+		printf '.'
+		mpirun -np $INPUT ./$FILE >> data/TIEMPOS_${FILE:(-2)}
+		printf '.'
+		echo Fin np=$INPUT >> data/TIEMPOS_${FILE:(-2)}
+		echo -e "\n\n" >> data/TIEMPOS_${FILE:(-2)}
+	done 
+	echo -e "\nFin ejecucion Codigo paralelo\n"
+done
